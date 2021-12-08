@@ -11,6 +11,8 @@ void reverse(int array[], int i) {
 }
 
 int main() {
+	setlocale(LC_ALL, "Lithuanian");
+	
 	int num;
 	std::cout << "Įvesti šešiaženkli skaičių: "; std::cin >> num;
 

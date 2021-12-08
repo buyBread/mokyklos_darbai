@@ -16,8 +16,9 @@ public:
 	}
 };
 
-int main()
-{
+int main() {
+	setlocale(LC_ALL, "Lithuanian");
+	
 	int a, b;
 	
 	std::cout << "Įveskite pirmoj stačiakampio kraštines (a, b): "; std::cin >> a >> b;

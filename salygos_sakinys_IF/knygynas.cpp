@@ -14,6 +14,8 @@ public:
 };
 
 int main() {
+	setlocale(LC_ALL, "Lithuanian");
+	
 	int kodas, parduota;
 	
 	std::cout << "Įveskite pirmosios knygos kodą ir parduotų egzempliurių skaičių: "; std::cin >> kodas >> parduota;

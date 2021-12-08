@@ -4,6 +4,8 @@
 #define PI 3.14159265358979323846
 
 int main() {
+	setlocale(LC_ALL, "Lithuanian");
+	
 	int litrai;
 	std::cout << "Įveskite skysčio kiekį: "; std::cin >> litrai;
 
