@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap');
+
+* {
+	/* viskas naudoja ubuntu font */
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.8vh;
+	font-weight: 400; /* regular */
+	
+	padding: 0;
+	
+	box-sizing: border-box;
+
+	margin:  0;
+}
+
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+
+@mixin filter-red       { filter: invert(31%) sepia(46%) saturate(3462%) hue-rotate(343deg) brightness(102%) contrast(77%); }
+@mixin filter-orange    { filter: invert(77%) sepia(34%) saturate(4449%) hue-rotate(343deg) brightness(101%) contrast(94%); }
+@mixin filter-yellow    { filter: invert(84%) sepia(34%) saturate(710%) hue-rotate(8deg) brightness(101%) contrast(108%); }
+@mixin filter-green     { filter: invert(72%) sepia(65%) saturate(462%) hue-rotate(70deg) brightness(93%) contrast(90%); }
+@mixin filter-cyan      { filter: invert(83%) sepia(20%) saturate(882%) hue-rotate(122deg) brightness(94%) contrast(95%); }
+@mixin filter-lightblue { filter: invert(76%) sepia(22%) saturate(1099%) hue-rotate(163deg) brightness(98%) contrast(94%) }
+@mixin filter-blue      { filter: invert(29%) sepia(94%) saturate(2662%) hue-rotate(231deg) brightness(100%) contrast(102%); }
+@mixin filter-purple    { filter: invert(40%) sepia(45%) saturate(2544%) hue-rotate(256deg) brightness(99%) contrast(103%); }
+@mixin filter-pink      { filter: invert(94%) sepia(67%) saturate(6854%) hue-rotate(282deg) brightness(108%) contrast(101%); }
+@mixin filter-white     { filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(5deg) brightness(93%) contrast(122%); }
+@mixin filter-lightgray { filter: invert(93%) sepia(7%) saturate(25%) hue-rotate(314deg) brightness(82%) contrast(84%); }
+@mixin filter-gray      { filter: invert(52%) sepia(0%) saturate(1%) hue-rotate(241deg) brightness(91%) contrast(89%); }
+@mixin filter-darkgray  { filter: invert(13%) sepia(0%) saturate(4265%) hue-rotate(319deg) brightness(96%) contrast(80%); }
+@mixin filter-black     { filter: invert(0%) sepia(50%) saturate(31%) hue-rotate(88deg) brightness(100%) contrast(106%); }
+
+/* for HTML */
+.filter-red       { @include filter-red }
+.filter-orange    { @include filter-orange }
+.filter-yellow    { @include filter-yellow }
+.filter-green     { @include filter-green }
+.filter-cyan      { @include filter-cyan }
+.filter-lightblue { @include filter-lightblue }
+.filter-blue      { @include filter-blue }
+.filter-purple    { @include filter-purple }
+.filter-pink      { @include filter-pink }
+.filter-white     { @include filter-white }
+.filter-lightgray { @include filter-lightgray }
+.filter-gray      { @include filter-gray }
+.filter-drakgray  { @include filter-darkgray }
+.filter-black     { @include filter-black }

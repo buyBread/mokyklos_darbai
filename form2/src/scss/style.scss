@@ -1,0 +1,142 @@
+// Ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+	margin:  0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+}
+
+body {
+	// center form
+	display:        flex; // flexbox
+	flex-direction: column; // top-bottom
+	align-items:    center;
+
+	font-family: 'Ubuntu', sans-serif;
+	font-size:   12px;
+}
+
+form.registracijos-forma {
+	margin: 1%;
+	width:  600px;
+
+	font-size: 14px;
+
+	// ===============
+	//     Fields
+	// ===============
+
+	fieldset {
+		padding-top:    4px;
+		padding-bottom: 4px;
+		padding-left:   6px;
+		padding-right:  6px;
+
+		border: 0px;
+
+		margin-bottom: 8px;
+
+		legend {
+			font-size:   18px;
+			font-weight: bold;
+
+			margin-bottom: 10px;
+		}
+	}
+}
+
+$label-width: 180px;
+
+div.form-row {
+	display:         flex;
+	justify-content: flex-start;
+
+	flex-wrap:      wrap;
+	flex-direction: row;
+
+	// centers text
+	align-items: center;
+
+	margin-bottom: 8px;
+
+	// ===============
+
+	label {
+		text-align:   left;
+		width:        $label-width;
+	}
+
+	label.required::after,
+	p.pastaba::after {
+		content: " *";
+		color:   red;
+	}
+
+	label.salygu-tekstas {
+		margin-left: $label-width;
+		width:       auto;
+	}
+
+	label.papildoma-informacija {
+		margin-top: -81px;
+	}
+
+	p.pastaba {
+		margin-top:    14px;
+		margin-bottom: 14px;
+		margin-left:   $label-width;
+	}
+
+	span.pilkas_txt {
+		color:     #999999;
+		font-size: 13px;
+	}
+
+	// ===============
+
+	input[type="email"],
+	input[type="password"],
+	input[type="text"],
+	input[type="tel"],
+	select {
+		padding-top:    5px;
+		padding-bottom: 5px;
+		padding-left:   3px;
+		padding-right:  3px;
+
+		width: 299px;
+	}
+
+	input[name="gatve"],
+	input[name="pastokodas"],
+	input[name="miestas"] {
+		width: 160px;
+
+		margin-right: 10px;
+	}
+
+	input[name="namas"] {
+		width: 129px;
+	}
+
+	input[type="checkbox"] {
+		margin-right: 5px;
+	}
+
+	input[type="submit"] {
+		margin-left: $label-width;
+
+		font-weight: bold;
+
+				 // top right bottom left
+		padding: 8px 20px 8px 20px;
+
+		border:        1px solid #666666;
+		border-radius: 10px;
+
+		background-image: linear-gradient(#aaaaaa, #888888);
+		color:            #ffffff;
+	}
+}

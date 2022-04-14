@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>grid darbas</title>
+		<link rel="stylesheet" media="screen and (orientation: landscape)" href="css/landscape.css">
+		<link rel="stylesheet" media="screen and (orientation: portrait)" href="css/portrait.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<!-- https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link -->
+		<script>
+			var $root = $('html, body');
+
+			$(document).on('click', 'a[href^="#"]', function (event) {
+				event.preventDefault();
+				$root.animate({scrollTop: $($.attr(this, 'href')).offset().top}, 500);
+			});
+		</script>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-container">
+				<div class="logo-container">
+					<img src="assets/nav/edit.svg" class="filter-white">
+					<p><span>Lorem</span> Ipsum<p>
+				</div>
+				<div class="links-container">
+					<a href="#home" id="navlink">HOME</a>
+					<a href="#about-us" id="navlink">ABOUT US</a>
+					<a href="#gallery" id="navlink">GALLERY</a>
+					<a href="#contact" id="navlink" class="contact-button">CONTACT</a>
+				</div>
+			</div>
+			<script>
+				$('[id="navlink"]').on("click", function () {
+					$('[id="navlink"]').removeClass("highlight");
+					$(this).toggleClass("highlight");
+				});
+
+				$("#contact").on("click", function() {
+					$('[id="navlink"]').removeClass("highlight");
+				});
+			</script>
+		</nav>
+		<header>
+			<a id="home"></a>
+			<div class="header-container">
+				<h1>Lorem Ipsum dolor sit amet</h1>
+				<a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+			</div>
+		</header>
+		<div class="information-container">
+			<a id="about-us"></a>
+			<h2>About Us</h2>
+			<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<div class="grid-container">
+				<div class="grid-item">
+					<img src="assets/icons/archive.svg" class="filter-green">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/icons/cloud.svg" class="filter-gray">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/icons/cpu.svg" class="filter-blue">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/icons/github.svg">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/icons/hard-drive.svg" class="filter-orange">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="grid-item">
+					<img src="assets/icons/mail.svg" class="filter-red">
+					<h2>Lorem Ipsum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="gallery-container">
+			<a id="gallery"></a>
+			<h2>Gallery</h2>
+			<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="grid-container">
+				<div class="grid-item1">
+					<img src="assets/gallery/wallhaven-g7kwe7.jpg">
+					<p class="upper">Lorem</p>
+					<p class="lower">Ipsum</p>
+				</div>
+				<div class="grid-item2">
+					<img src="assets/gallery/wallhaven-6o1lrl.jpg">
+					<p class="upper">Lorem</p>
+					<p class="lower">Ipsum</p>
+				</div>
+				<div class="grid-item3">
+					<img src="assets/gallery/wallhaven-ey1j7o.jpg">
+					<p class="upper">Lorem</p>
+					<p class="lower">Ipsum</p>
+				</div>
+				<div class="grid-item4">
+					<img src="assets/gallery/wallhaven-8owgyj.jpg">
+					<p class="upper">Lorem</p>
+					<p class="lower">Ipsum</p>
+				</div>
+			</div>
+		</div>
+		<div class="contact-container">
+			<a id="contact"></a>
+			<div class="information">
+				<div class="information-group">
+					<img class="filter-red" src="assets/icons/map-pin.svg">
+					<div class="information-text">
+					<h3>Location</h3>
+						<p>Laisvės al. 33, Kaunas</p>
+						<p>Kęstučio g. 53, Kaunas</p>
+					</div>
+				</div>
+				<div class="information-group">
+					<img  class="filter-red" src="assets/icons/mail.svg">
+					<div class="information-text">
+						<h3>Email</h3>
+						<p>info@kitm.lt</p>
+					</div>
+				</div>
+				<div class="information-group">
+					<img  class="filter-red" src="assets/icons/phone-call.svg">
+					<div class="information-text">
+						<h3>Call</h3>
+						<p>+370 600 63 439</p>
+					</div>
+				</div>
+			</div>
+			<form>
+				<input type="text" id="name" name="name" placeholder="Your Name" >
+				<input type="email" id="email" name="email" placeholder="Email">
+				<input type="text" id="subject" name="subject" placeholder="Subject">
+				<textarea name="message" placeholder="Message" rows="6"></textarea>
+				<input type="submit" value="Send Message">
+			</form>
+		</div>
+		<footer>
+			<h2>© Lorem Ipsum</h2>
+		</footer>
+	</body>
+</html>

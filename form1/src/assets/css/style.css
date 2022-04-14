@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+form.register-form {
+  width: 30%;
+  margin: 1%;
+  background-color: #eeeeee;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  padding-left: 6px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+}
+form.register-form #title {
+  padding: 2px 2px 2px 2px;
+  margin-top: -9px;
+  margin-left: 5px;
+  background: #cccccc;
+  width: 107px;
+  border-radius: 4px;
+}
+
+div.credentials-style {
+  width: calc(100% - 26px);
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  padding: 8px 8px 8px 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.credentials-style #credentials-title {
+  padding: 2px 2px 2px 2px;
+  margin-top: -17px;
+  margin-left: 5px;
+  background: #cccccc;
+  width: 129px;
+  border-radius: 4px;
+}
+div.credentials-style p.form-question-title {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.preferences-style {
+  width: calc(100% - 26px);
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  padding: 8px 8px 8px 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.preferences-style #preferences-title {
+  padding: 2px 2px 2px 2px;
+  margin-top: -17px;
+  margin-left: 5px;
+  background: #cccccc;
+  width: 80px;
+  border-radius: 4px;
+}
+div.preferences-style p.form-question-title {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.form-style input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 2px;
+}
+div.form-style input[type=text],
+div.form-style input[type=email],
+div.form-style input[type=date] {
+  width: 50%;
+  height: initial;
+}
+div.form-style label {
+  padding-right: 4px;
+}
+div.form-style p.feedback * {
+  vertical-align: top;
+}
+div.form-style textarea {
+  resize: none;
+}

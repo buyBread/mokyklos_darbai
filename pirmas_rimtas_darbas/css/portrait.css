@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  /* viskas naudoja ubuntu font */
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8vh;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.filter-red {
+  filter: invert(31%) sepia(46%) saturate(3462%) hue-rotate(343deg) brightness(102%) contrast(77%);
+}
+
+.filter-orange {
+  filter: invert(77%) sepia(34%) saturate(4449%) hue-rotate(343deg) brightness(101%) contrast(94%);
+}
+
+.filter-yellow {
+  filter: invert(84%) sepia(34%) saturate(710%) hue-rotate(8deg) brightness(101%) contrast(108%);
+}
+
+.filter-green {
+  filter: invert(72%) sepia(65%) saturate(462%) hue-rotate(70deg) brightness(93%) contrast(90%);
+}
+
+.filter-cyan {
+  filter: invert(83%) sepia(20%) saturate(882%) hue-rotate(122deg) brightness(94%) contrast(95%);
+}
+
+.filter-lightblue {
+  filter: invert(76%) sepia(22%) saturate(1099%) hue-rotate(163deg) brightness(98%) contrast(94%);
+}
+
+.filter-blue {
+  filter: invert(29%) sepia(94%) saturate(2662%) hue-rotate(231deg) brightness(100%) contrast(102%);
+}
+
+.filter-purple {
+  filter: invert(40%) sepia(45%) saturate(2544%) hue-rotate(256deg) brightness(99%) contrast(103%);
+}
+
+.filter-pink {
+  filter: invert(94%) sepia(67%) saturate(6854%) hue-rotate(282deg) brightness(108%) contrast(101%);
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(5deg) brightness(93%) contrast(122%);
+}
+
+.filter-lightgray {
+  filter: invert(93%) sepia(7%) saturate(25%) hue-rotate(314deg) brightness(82%) contrast(84%);
+}
+
+.filter-gray {
+  filter: invert(52%) sepia(0%) saturate(1%) hue-rotate(241deg) brightness(91%) contrast(89%);
+}
+
+.filter-drakgray {
+  filter: invert(13%) sepia(0%) saturate(4265%) hue-rotate(319deg) brightness(96%) contrast(80%);
+}
+
+.filter-black {
+  filter: invert(0%) sepia(50%) saturate(31%) hue-rotate(88deg) brightness(100%) contrast(106%);
+}
+
+body {
+  background-color: #222;
+}
+
+img {
+  user-select: none;
+}
+
+div.site-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+  padding: 2vh 2vw;
+}
+
+nav {
+  width: 100vw;
+  text-align: center;
+  background-color: #555;
+  padding: 1.35vh;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+nav a:link {
+  color: #eee;
+}
+nav a:visited {
+  color: #eee;
+}
+nav a:active, nav a:hover, nav a:focus {
+  color: #7cf;
+}
+
+header {
+  /* 100vh - site-container.margin-top - font-size - nav.padding */
+  height: 92.85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../assets/background.jpg");
+  background-position: 50% 0%;
+  background-repeat: repeat;
+  border-radius: 1.2vh;
+}
+header h1 {
+  text-align: center;
+  font-size: 9vh;
+  color: #eee;
+}
+header div.header-buttons {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  margin-top: 4vh;
+}
+header div.header-buttons a {
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2vh;
+  background-color: #eee;
+  border-radius: 0.6vh;
+  padding: 1.2vh;
+  margin-right: 10vw;
+}
+header div.header-buttons a:link {
+  color: #000;
+}
+header div.header-buttons a:visited {
+  color: #000;
+}
+header div.header-buttons a:hover, header div.header-buttons a:active, header div.header-buttons a:focus {
+  color: #692;
+}
+header div.header-buttons a:last-of-type {
+  margin-right: 0;
+}
+header div.header-buttons a:last-of-type:hover, header div.header-buttons a:last-of-type:active, header div.header-buttons a:last-of-type:focus {
+  color: #e85;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+
+section.text {
+  background-color: #fdfdfd;
+  border-radius: 0.8vh;
+  padding: 4vw 4vw;
+  margin-bottom: 2vw;
+}
+section.text div.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-inbetween;
+}
+section.text div.text-container div.text-group {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+section.text div.text-container div.text-group img {
+  height: 5.8vh;
+  margin-bottom: 2vh;
+}
+section.text div.text-container div.text-group h2 {
+  font-size: 2.4vh;
+  margin-bottom: 0.6vh;
+}
+section.text div.text-container div.text-group p {
+  font-size: 1.6vh;
+}
+section.text div.text-container div.text-group:last-of-type {
+  margin-bottom: 0;
+}
+
+section.team {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fdfdfd;
+  border-radius: 0.8vh;
+  padding: 4vw 4vw;
+  margin-bottom: 2vw;
+}
+section.team div.team-header {
+  margin-bottom: 4vh;
+}
+section.team div.team-header h3 {
+  font-size: 5.5vh;
+}
+section.team div.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-inbetween;
+}
+section.team div.team-container div.team-member {
+  margin-bottom: 4vh;
+}
+section.team div.team-container div.team-member img {
+  height: 20vh;
+  border-radius: 50%;
+}
+section.team div.team-container div.team-member h2 {
+  margin-bottom: 1vh;
+}
+section.team div.team-container div.team-member p:first-of-type {
+  user-select: none;
+}
+section.team div.team-container div.team-member:last-of-type {
+  margin-bottom: 0;
+}
+
+section.portfolio {
+  background-color: #fdfdfd;
+  border-radius: 0.8vh;
+  padding: 2vw 2vw;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+section.portfolio h3 {
+  font-size: 5.5vh;
+  margin-bottom: 0.65vh;
+}
+section.portfolio div.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.portfolio div.portfolio-container div.image {
+  display: flex;
+  justify-content: center;
+  border: 0.55vh #000 solid;
+  position: relative;
+  width: 49%;
+  height: 100%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+section.portfolio div.portfolio-container div.image img {
+  width: 100%;
+}
+section.portfolio div.portfolio-container div.image p {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+}
+section.portfolio div.portfolio-container div.image:nth-child(2n) {
+  margin-right: 0;
+}
+section.portfolio div.portfolio-container div.image:last-of-type {
+  margin-right: 0;
+}
+
+section.contact {
+  background-color: #fdfdfd;
+  border-radius: 0.8vh;
+  padding: 1vh 2vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.contact div.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+section.contact div.contact-container div.information {
+  display: flex;
+  flex-direction: row;
+  color: #77bfd9;
+  margin-bottom: 4vh;
+}
+section.contact div.contact-container div.information div.information-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+section.contact div.contact-container div.information div.information-group img {
+  float: left;
+  height: 2.75vh;
+  margin-right: 1vw;
+}
+section.contact div.contact-container div.information div.information-group div.information-text {
+  float: right;
+}
+section.contact div.contact-container div.information div.information-group div.information-text h3 {
+  font-size: 2vh;
+}
+section.contact div.contact-container div.information div.information-group div.information-text p {
+  font-size: 1.4vh;
+}
+section.contact div.contact-container form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.contact div.contact-container form input[id=name] {
+  width: 49%;
+  margin-right: 1%;
+}
+section.contact div.contact-container form input[id=email] {
+  width: 49%;
+  margin-left: 1%;
+}
+section.contact div.contact-container form input[type=submit] {
+  width: auto;
+  padding: 1.2vh;
+  margin-bottom: 0;
+  background-color: #77bfd9;
+  color: #fff;
+  border: 0.15vh #77bfd9 solid;
+  border-radius: 0.4vh;
+}
+section.contact div.contact-container form input[type=submit]:hover {
+  background-color: #fff;
+  color: #77bfd9;
+}
+section.contact div.contact-container form input {
+  width: 100%;
+  font-size: 1.5vh;
+  padding: 0.9vh;
+  margin-bottom: 2vh;
+}
+section.contact div.contact-container form textarea {
+  width: 100%;
+  font-size: 1.5vh;
+  padding: 0.9vh;
+  resize: none;
+  margin-bottom: 3.5vh;
+}
+
+footer {
+  width: 100%;
+  color: #eee;
+  text-align: center;
+  background-color: #555;
+  padding: 3vh 2vw;
+}
+footer div.footer-icons {
+  height: 4vh;
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  /* ?????????????????????????????????????????????????????????????????????? */
+  /* ?????????????????????????????????????????????????????????????????????? */
+}
+footer div.footer-icons a {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+footer div.footer-icons a img {
+  height: 2.75vh;
+}
+footer div.footer-icons a:first-of-type {
+  margin-left: 0;
+}
+footer div.footer-icons a:last-of-type {
+  margin-right: 3vw;
+}
+footer h2 {
+  font-size: 1.45vh;
+}

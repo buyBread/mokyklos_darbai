@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>forma</title>
+
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div class="form-style">
+	<form class="register-form">
+		<!-- žinau, kad yra fieldset. tingėjau keisti viską -->
+		<!-- ir taip žinau, kad ką aš darau, fieldset gali atlikti lengviau be tiek daug papildomo darbo -->
+		<!-- (su scss tai neatrodo taip bjauriai kaip atrodytu su css) -->
+		<p id="title">Registracijos forma</p>
+		
+		<label for='first-name'>Vardas</label>
+		<input required
+			id=  'first-name'
+			name='first-name'
+
+			type='text'
+			placeholder="Įveskite savo vardą"
+		/><br>
+		<label for='last-name'>Pavardė</label>
+		<input required
+			id=  'last-name'
+			name='last-name'
+				
+			type='text'
+			placeholder="Įveskite savo pavardę"
+		/><br>
+		<label for='email'>El. Paštas</label>
+		<input required
+			id=  'email'
+			name='email'
+				
+			type='email'
+			placeholder='vardenis@pavardenis.lt'
+		/><br>
+		<label for='date'>Gimimo data</label>
+		<input required
+			id=  'date'
+			name='date'
+				
+			type='date'
+			placeholder='vardenis@pavardenis.lt'
+		/><br>
+		<input type='radio' id='male' name='gender' required>
+		<label for='male'>Vyras</label>
+		<input type='radio' id='female' name='gender' required>
+		<label for='female'>Moteris</label>
+		<input type='radio' id='noanswer' name='gender' required>
+		<label for='noanswer'>Nesakysiu</label><br>
+		
+		<div class="credentials-style">
+			<p id="credentials-title">Registracijos duomenys</p>
+
+			<label for='login-name'>Prisijungimo Vardas</label>
+			<input required
+				id=  'login-name'
+				name='login-name'
+				
+				type='text'
+			/><br>
+			<label for='password'>Slaptažodis</label>
+			<input required
+				id=  'password'
+				name='password'
+				
+				type='password'
+			/><br>
+			<label for='personal-code'>Paskutiniai 4 asmens kodo skaičiai</label>
+			<input required
+				minlength="4" maxlength="4" 
+				id=  'personal-code'
+				name='personal-code'
+				
+				type='text'
+			/><br>
+		</div>
+
+		<div class="preferences-style">
+			<p id="preferences-title">Jūsų pomėgiai</p>
+
+			<p class="form-question-title"><b>Mėgstamiausi gėrimai</b></p>
+			<input type='checkbox' id='vanduo' name='vanduo'>
+			<label for='vanduo'>Vanduo</label>
+			<input type='checkbox' id='pienas' name='pienas'>
+			<label for='pienas'>Pienas</label>
+			<input type='checkbox' id='coke' name='coke'>
+			<label for='coke'>Coca-Cola</label>
+			<input type='checkbox' id='pepsi' name='pepsi'>
+			<label for='pepsi'>Pepsi Cola</label>
+			<input type='checkbox' id='kava' name='kava'>
+			<label for='kava'>Kava</label><br>
+			<p class="form-question-title"><b>Mėgstamiausias maistas</b></p>
+			<select id="food", name="food">
+				<option value="select">Pasirinkite maistą...</option>
+				<option value="pizza">Pica</option>
+				<option value="kebab">Kebabas</option>
+				<option value="salad">Salotos</option>
+				<option value="nuts">Riešutai</option>
+				<option value="chips">Traškučiai</option>
+				<option value="fruit">Vaisiai</option>
+			</select>
+		</div>
+
+		<p class="feedback">
+			<label for="feedback">Jusų atsiliepimas (150 simbolių limitas)</label>
+			<textarea required maxlength="150" id="feedback" name="feedback" rows="8" cols="36">Jusų atsiliepimas...</textarea>
+		</p>
+
+		<label for="agree">Sutinku su salygomis</label>
+		<input type="checkbox" id="agree" name="agree" required><br>
+
+		<input type="reset" value="Išvalyti duomenis">
+		<input type="submit" value="Pateikti duomenis">
+	</form>
+	</div>	
+</body>
+</html>

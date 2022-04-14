@@ -1,0 +1,97 @@
+// Ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+	margin:  0px;
+	padding: 0px;
+}
+
+form.register-form {
+	width:  30%;
+	margin: 1%;
+
+	background-color: #eeeeee;
+
+	border:        2px solid #cccccc;
+	border-radius: 4px;
+
+	padding-left: 6px;
+
+	// grazu
+	font-family: 'Ubuntu', sans-serif;
+	font-size:   12px;
+
+	#title {
+		padding: 2px 2px 2px 2px;
+	
+		margin-top: -9px;
+		margin-left: 5px;
+		
+		background: #cccccc;
+
+		width:         107px;
+		border-radius: 4px;
+	}
+}
+
+@mixin subform($name, $title-width) {
+	div.#{$name}-style {
+		// nezinau kodel 100% yra didesnis 4px...
+		width: calc(100% - 26px); // ^ + .register-form padding-left + 16 (nes padding 8*2)
+								  // CSS yra trash
+
+		border:        2px solid #cccccc;
+		border-radius: 4px;
+
+		padding: 8px 8px 8px 8px;
+
+		margin-top:    10px;
+		margin-bottom: 10px;
+
+		##{$name}-title {
+			padding: 2px 2px 2px 2px;
+	
+			margin-top: -17px;
+			margin-left: 5px;
+		
+			background: #cccccc;
+
+			width:         #{$title-width};
+			border-radius: 4px;
+		}
+
+		p.form-question-title {
+			font-size: 14px;
+
+			padding-top:    5px;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+@include subform(credentials, 129px);
+@include subform(preferences, 80px);
+
+div.form-style {
+	input {
+		margin-right:  2px
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="date"] {
+		width:  50%;
+		height: initial;
+	}
+
+	label {
+		padding-right: 6px;
+	}
+
+	p.feedback * {
+		vertical-align: top;
+	}
+	textarea {
+		resize: none;
+	}
+}

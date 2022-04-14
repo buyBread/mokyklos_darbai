@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+}
+
+form.registracijos-forma {
+  margin: 1%;
+  width: 600px;
+  font-size: 14px;
+}
+form.registracijos-forma fieldset {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 0px;
+  margin-bottom: 8px;
+}
+form.registracijos-forma fieldset legend {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+div.form-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+div.form-row label {
+  text-align: left;
+  width: 180px;
+}
+div.form-row label.required::after,
+div.form-row p.pastaba::after {
+  content: " *";
+  color: red;
+}
+div.form-row label.salygu-tekstas {
+  margin-left: 180px;
+  width: auto;
+}
+div.form-row label.papildoma-informacija {
+  margin-top: -81px;
+}
+div.form-row p.pastaba {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-left: 180px;
+}
+div.form-row span.pilkas_txt {
+  color: #999999;
+  font-size: 13px;
+}
+div.form-row input[type=email],
+div.form-row input[type=password],
+div.form-row input[type=text],
+div.form-row input[type=tel],
+div.form-row select {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 299px;
+}
+div.form-row input[name=gatve],
+div.form-row input[name=pastokodas],
+div.form-row input[name=miestas] {
+  width: 160px;
+  margin-right: 10px;
+}
+div.form-row input[name=namas] {
+  width: 129px;
+}
+div.form-row input[type=checkbox] {
+  margin-right: 5px;
+}
+div.form-row input[type=submit] {
+  margin-left: 180px;
+  font-weight: bold;
+  padding: 8px 20px 8px 20px;
+  border: 1px solid #666666;
+  border-radius: 10px;
+  background-image: linear-gradient(#aaaaaa, #888888);
+  color: #ffffff;
+}
